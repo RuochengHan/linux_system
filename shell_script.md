@@ -6,7 +6,7 @@ do
 done
 ```
 
-2. Print special charaters in awk, e.g. ***"***:
+2. Print special charaters in awk, e.g. `"`:
 ```bash
 awk -F ' ' '{print $1"\x22"}' file.dat
 ```

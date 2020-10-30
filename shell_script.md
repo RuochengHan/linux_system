@@ -29,3 +29,8 @@ do
 done
 
 ```
+
+2. Remove the first character from the string:
+```bash
+name="${name:1}"
+```

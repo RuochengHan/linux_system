@@ -30,7 +30,13 @@ done
 
 ```
 
-2. Remove the first character from the string:
+4. Remove the first character from the string:
 ```bash
 name="${name:1}"
+```
+
+5. Use `rsync` to copy files with limited bandwidth
+```bash
+rsync --bwlimit=20000 -vvv /path-to-src /path-to-des
+rsync --bwlimit=20000 -vvv -e 'ssh -p $port' name@domain:/path-to-src /path-to-des
 ```

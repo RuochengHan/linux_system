@@ -43,7 +43,7 @@ rsync --bwlimit=20000 -vvv -e 'ssh -p $port' name@domain:/path-to-src /path-to-d
 
 6. Check if file contain some string
 ```bash
-if grep -q SomeString "$File"; then
+if grep -q SomeString File; then
   # Do something
 fi
 ```

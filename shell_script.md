@@ -47,3 +47,9 @@ if grep -q SomeString File; then
   # Do something
 fi
 ```
+
+7. Check if a subfolder contains a file
+```bash
+find */$subfolder -type d '!' -exec test -e "{}/$file" ';' -print
+```
+

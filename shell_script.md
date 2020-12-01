@@ -53,3 +53,12 @@ fi
 find */$subfolder -type d '!' -exec test -e "{}/$file" ';' -print
 ```
 
+8. Get the information between two lines:
+```bash
+awk "/$line1/{f=1;next} /$line2/{f=0} f" $file > tmp
+```
+
+9. Delete the information between two lines: (-E ensure some regex pattern like \s)
+```bash
+sed -i -E "/$line1/,/$line2/{//!d}" $orb_file
+```

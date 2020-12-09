@@ -65,6 +65,6 @@ sed -i -E "/$line1/,/$line2/{//!d}" $orb_file
 
 10. get occurance of a character in a file
 ```bash
-grep -o $char $file| wc -l
+grep -o $char $file | wc -l
 ```
 

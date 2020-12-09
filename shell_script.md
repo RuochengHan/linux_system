@@ -62,3 +62,9 @@ awk "/$line1/{f=1;next} /$line2/{f=0} f" $file > tmp
 ```bash
 sed -i -E "/$line1/,/$line2/{//!d}" $orb_file
 ```
+
+10. get occurance of a character in a file
+```bash
+grep -o $char $file| wc -l
+```
+

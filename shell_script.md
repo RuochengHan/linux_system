@@ -68,3 +68,7 @@ sed -i -E "/$line1/,/$line2/{//!d}" $orb_file
 grep -o $char $file | wc -l
 ```
 
+11. combine static lib:
+```bash
+libtool -static -o new.a old1.a old2.a
+```

@@ -73,7 +73,7 @@ grep -o $char $file | wc -l
 libtool -static -o new.a old1.a old2.a
 ```
 
-11. Match the line in A file that exist in B file:
+12. Match the line in A file that exist in B file:
 ```bash
 grep -p $A $B
 ```

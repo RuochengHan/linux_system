@@ -63,12 +63,19 @@ awk "/$line1/{f=1;next} /$line2/{f=0} f" $file > tmp
 sed -i -E "/$line1/,/$line2/{//!d}" $orb_file
 ```
 
-10. get occurance of a character in a file
+10. Get occurance of a character in a file
 ```bash
 grep -o $char $file | wc -l
 ```
 
-11. combine static lib:
+11. Combine static lib:
 ```bash
 libtool -static -o new.a old1.a old2.a
 ```
+
+11. Match the line in A file that exist in B file:
+```bash
+grep -p $A $B
+```
+
+

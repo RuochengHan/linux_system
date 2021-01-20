@@ -78,4 +78,9 @@ libtool -static -o new.a old1.a old2.a
 grep -p $A $B
 ```
 
+13. Split the string by '_':
+```bash
+string1=$(echo $string | cut -f1 -d_)
+string2=$(echo $string | cut -f2 -d_)
+```
 

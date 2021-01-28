@@ -84,3 +84,7 @@ string1=$(echo $string | cut -f1 -d_)
 string2=$(echo $string | cut -f2 -d_)
 ```
 
+14. Transfer data with bandwidth (unit KBytes/s) limit rsync:
+```bash
+rsync –bwlimit=10000 /path/to/source /path/to/dest/
+```

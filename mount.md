@@ -6,3 +6,10 @@ sudo sshfs michaelbishop@192.168.1.100:/home /home -o nonempty -o allow_other -o
 ***nonempty*** overwrite the current home, but recover once umounted.
 
 Remeber to also create the same user.
+
+**mount disk**
+```bash
+# lsblk
+# mount /dev/sdc /scratch
+
+```

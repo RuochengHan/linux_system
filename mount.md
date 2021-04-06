@@ -9,7 +9,7 @@ Remeber to also create the same user.
 
 **mount disk**
 ```bash
-# lsblk
-# mount /dev/sdc /scratch
+$ lsblk
+$ mount /dev/sdc /scratch
 
 ```

@@ -11,5 +11,6 @@ Remeber to also create the same user.
 ```bash
 $ lsblk
 $ mount /dev/sdc /scratch
+$ sudo mkfs.ext4 /dev/sdc (if neccessary)
 
 ```

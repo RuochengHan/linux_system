@@ -3,3 +3,7 @@
 $ sudo nvidia-smi -i 0 -pl 140
 ```
 2. to allow modifying core/memory clock: set coolbit to 12, then reboot computer.
+3. Chia folder:
+```bash
+~/.chia/
+```

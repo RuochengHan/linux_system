@@ -10,3 +10,7 @@ $ iostat
 $ sudo yum install nvme-cli
 $ sudo nvme smart-log /dev/nvme0
 ```
+4. check ssd total written
+```bash
+echo "GB Written: $(echo "scale=3; $(sudo /usr/sbin/smartctl -A /dev/sdc | grep "Total_LBAs_Written" | awk '{print $10}') * 512 / 1073741824" | bc | sed ':a;s/\B[0-9]\{3\}\>/,&/;ta')"
+ ```

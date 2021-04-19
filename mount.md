@@ -14,3 +14,4 @@ $ mount /dev/sdc /scratch
 $ sudo mkfs.ext4 /dev/sdc (if neccessary)
 
 ```
+Other info: https://www.jianshu.com/p/d0c75fd8bcc5

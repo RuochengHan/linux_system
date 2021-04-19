@@ -7,3 +7,4 @@ $ sudo nvidia-smi -i 0 -pl 140
 ```bash
 ~/.chia/
 ```
+4. Chia remote GUI: https://github.com/Chia-Network/chia-blockchain/wiki/Connecting-the-UI-to-a-remote-daemon

@@ -1,9 +1,10 @@
 1. GLIBC problem: https://itbilu.com/linux/management/NymXRUieg.html
 2. I/O status: https://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/iostat.html
 ```bash
-$ sudo yum install iotop sysstat
+$ sudo yum install iotop sysstat dstat
 $ sudo iotop
 $ iostat
+$ dstat -tdD total,sda,sdb,sdc # this is better
 ```
 3. nvme temperature: 
 ```bash 

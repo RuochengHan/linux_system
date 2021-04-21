@@ -12,6 +12,9 @@ Remeber to also create the same user.
 $ lsblk
 $ mount /dev/sdc /scratch
 $ sudo mkfs.ext4 /dev/sdc (if neccessary)
+remove the reserve space for superuser: https://askubuntu.com/questions/249387/df-h-used-space-avail-free-space-is-less-than-the-total-size-of-home
+$ sudo tune2fs -l /dev/sdc # check
+$ sudo tune2fs -m 0 /dev/sdc # set from 5 % to 0
 
 ```
 Other info: https://www.jianshu.com/p/d0c75fd8bcc5

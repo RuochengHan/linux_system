@@ -88,3 +88,9 @@ string2=$(echo $string | cut -f2 -d_)
 ```bash
 rsync –bwlimit=10000 /path/to/source /path/to/dest/
 ```
+
+15. long time running command stdout without buffering:
+```bash
+$ sudo yum install expect
+$ unbuffer command | tee -a log # real-time print out in command and redirect to log file
+```

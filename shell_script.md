@@ -91,6 +91,13 @@ rsync –bwlimit=10000 /path/to/source /path/to/dest/
 
 15. long time running command stdout without buffering:
 ```bash
+./command.sh:
+for i in `seq 1 100`
+do 
+  echo 1
+  sleep 1
+done
+
 $ sudo yum install expect
-$ unbuffer command | tee -a log # real-time print out in command and redirect to log file
+$ unbuffer ./command.sh | tee -a log # real-time print out of "1" and redirect to log file
 ```

@@ -2,9 +2,9 @@
 2. I/O status: https://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/iostat.html
 ```bash
 $ sudo yum install iotop sysstat dstat
-$ sudo iotop
-$ iostat
-$ dstat -tdD total,sda,sdb,sdc # this is better
+$ sudo iotop # this only show total I/O
+$ iostat # this show the value from CPU
+$ dstat -tdD total,sda,sdb,sdc # this is better, show directly from every disk
 ```
 3. nvme temperature: 
 ```bash 

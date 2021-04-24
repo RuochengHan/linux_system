@@ -21,4 +21,8 @@ $ sudo tune2fs -l /dev/sdc # check
 $ sudo tune2fs -m 0 /dev/sdc # set from 5 % to 0
 
 ```
-
+**mount Windows' harddisk to Linux**
+```bash
+# pay attention to space in Windows username "\ "
+sudo mount -t cifs //winIP/winfolder /mnt/win -o username=winsuer,dir_mode=0777,file_mode=0777
+```

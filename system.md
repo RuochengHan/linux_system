@@ -15,3 +15,7 @@ $ sudo nvme smart-log /dev/nvme0
 ```bash
 echo "GB Written: $(echo "scale=3; $(sudo /usr/sbin/smartctl -A /dev/sdc | grep "Total_LBAs_Written" | awk '{print $10}') * 512 / 1073741824" | bc | sed ':a;s/\B[0-9]\{3\}\>/,&/;ta')"
  ```
+5. check the port using PID:
+```bash
+$ sudo lsof -i -P -n | grep $port
+```

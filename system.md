@@ -19,3 +19,12 @@ echo "GB Written: $(echo "scale=3; $(sudo /usr/sbin/smartctl -A /dev/sdc | grep 
 ```bash
 $ sudo lsof -i -P -n | grep $port
 ```
+6. color scheme used:
+```bash
+$ vim ~/.vimrc
+syntax on
+colorscheme evening
+
+$ vim ~/.bashrc
+PS1='\[\033[1;36m\]\u\[\033[1;31m\]@\[\033[1;32m\]\h:\[\033[1;35m\]\w\[\033[1;31m\]\$\[\033[0m\] '
+```

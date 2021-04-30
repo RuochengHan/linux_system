@@ -10,6 +10,7 @@ $ dstat -tdD total,sda,sdb,sdc # this is better, show directly from every disk
 ```bash 
 $ sudo yum install nvme-cli
 $ sudo nvme smart-log /dev/nvme0
+￥ sudo smartctl -a /dev/nvme0
 ```
 4. check ssd total written
 ```bash

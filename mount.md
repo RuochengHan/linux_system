@@ -21,9 +21,14 @@ $ sudo tune2fs -l /dev/sdc # check
 $ sudo tune2fs -m 0 /dev/sdc # set from 5 % to 0
 
 ```
-**mount Windows' harddisk to Linux** \
+**mount remote Windows' harddisk to Linux** \
 Need to set dir_mode and file_mode, otherwise is default rwx only for root
 ```bash
 # pay attention to space in Windows username "\ "
 sudo mount -t cifs //winIP/winfolder /mnt/win -o username=winsuer,dir_mode=0777,file_mode=0777
+```
+**mount ntfs (win) format**
+Remember to select the correct partition, like /dev/sdf2 rather than /dev/sdf
+```bash
+mount -t ntfs-3g /dev/sdf2 /mnt/win
 ```

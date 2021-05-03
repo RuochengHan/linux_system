@@ -15,7 +15,7 @@ awk -F ' ' '{print $1"\x22"}' file.dat
 ```bash
 run () {
   local i=$(echo $1 | sed 's/\///')
-  do something with $i
+  #do something with $i, not that the command itself should be foreground
 }
 
 p=24
@@ -110,20 +110,3 @@ echo $mean
 awk -v M="$mean" '{ total += ($1-M)*($1-M); count++ } END { print sqrt(total/count) }' $1
 ```
 
-17. run parallel in shell with limited processes:
-```bash
-run(){
-  local x=$(echo $1 | sed 's/\///')
-  # do sth with $x
-}
-
-p=24 # processes number
-for i in `seq a b`
-do
-  run "$i" &
-  background=( $(jobs -p) )
-  if (( ${#background[@]} == p )); then 
-    wait -n
-  fi
-done
-```

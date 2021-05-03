@@ -1,0 +1,96 @@
+#! /bin/bash
+
+function prftt(){
+  if [ $TSHOW == 'True' ]
+  then
+    if [ $1 == 't' ]
+    then
+      printf "$tim\t|"
+    else
+      printf "\t\t|"
+    fi
+  fi
+}
+
+function findls(){
+
+  local list=`ls $1`
+  local num=`grep -o "/" <<< $1 | wc -l`
+  local num=$(($num-$NUMO+1))
+
+  for i in $list
+  do
+    detail=`ls -al $1/$i`
+    typ=${detail:0:5}
+    tim=`awk -F ' ' <<< $detail '{print $6,$7,$8}'`
+    # if it is dir, recursive call
+    if [ $typ == 'total' ]
+    then
+      prftt 'n'
+      printf '|   %.0s' `seq $num`
+      printf "|-- "
+      # match the character, matched dir with color
+      if [[ $i =~ $MCHAR ]]
+      then
+        echo -e "\033[31m$i\033[0m"
+      else  
+        echo -e "\033[33m$i\033[0m"
+      fi
+      findls $1/$i
+    # match the character, matched file shown
+    elif [ $DIRONLY == 'False' ] && [[ $i =~ $MCHAR ]]
+    then
+      prftt 't'
+      printf '|   %.0s' `seq $num`
+      if [[ $typ =~ 'x' ]]
+      then
+        printf "|-- "
+        echo -e "\033[32m$i\033[0m"
+      else
+        echo -e '|--' $i
+      fi
+    fi
+  done
+
+  # for space between recusive call
+  prftt 'n'
+  printf '|   %.0s' `seq $num`
+  printf "\n"
+
+}
+
+function help(){
+  echo " usage: lls [-d] [-m] matched_char directory"
+  echo " -h: Help message"
+  echo " -m: show only matched character, default show all"
+  echo " -d: show only directories, default show all"
+  echo " -t: show datetime of creation"
+  printf "\n"
+  exit 1;
+}
+
+
+# default settings
+MCHAR=
+DIRONLY=False
+TSHOW=False
+
+# Options
+while getopts ":hm:dt" opt
+do
+  case $opt in
+    h) help;;
+    m) MCHAR=$OPTARG;;
+    d) DIRONLY=True
+       MCHAR='    ';;
+    t) TSHOW=True;;
+    ?) echo "Error: unknown option '$@'"
+       exit 1;;
+  esac
+done
+
+prftt 'n'
+echo -e '|--' ${!#}
+NUMO=`grep -o "/" <<< ${!#} | wc -l`
+findls ${!#}
+

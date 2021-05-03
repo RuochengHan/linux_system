@@ -101,3 +101,12 @@ done
 $ sudo yum install expect
 $ unbuffer ./command.sh | tee -a log # real-time print out of "1" and redirect to log file
 ```
+
+16. mean value and standard deviation:
+```bash
+#! /bin/bash
+mean=`awk '{ total += $1; count++ } END { print total/count }' $1`
+echo $mean
+awk -v M="$mean" '{ total += ($1-M)*($1-M); count++ } END { print sqrt(total/count) }' $1
+```
+

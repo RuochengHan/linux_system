@@ -110,3 +110,7 @@ echo $mean
 awk -v M="$mean" '{ total += ($1-M)*($1-M); count++ } END { print sqrt(total/count) }' $1
 ```
 
+17. tr: delete
+```bash
+tr -d '\n'
+```

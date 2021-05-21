@@ -11,7 +11,8 @@ Remeber to also create the same user.
 ```bash
 $ lsblk
 $ mount /dev/sdc /scratch
-$ sudo mkfs.ext4 /dev/sdc (if neccessary)
+$ sudo mkfs.ext4 /dev/sdc (format, if neccessary)
+$ sudo mkfs -t ntfs /dev/sdf1 (format to ntfs e.g. for windows)
 ```
 Other info: https://www.jianshu.com/p/d0c75fd8bcc5
 

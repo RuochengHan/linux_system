@@ -20,6 +20,7 @@ remove the reserve space for superuser: https://askubuntu.com/questions/249387/d
 ```bash
 $ sudo tune2fs -l /dev/sdc # check
 $ sudo tune2fs -m 0 /dev/sdc # set from 5 % to 0
+# seems not work for ntfs
 
 ```
 **mount remote Windows' harddisk to Linux** \

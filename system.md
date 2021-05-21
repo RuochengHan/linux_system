@@ -32,3 +32,7 @@ colorscheme evening
 $ vim ~/.bashrc (~/.bash_profile)
 PS1='\[\033[1;36m\]\u\[\033[1;31m\]@\[\033[1;32m\]\h:\[\033[1;35m\]\w\[\033[1;31m\]\$\[\033[0m\] '
 ```
+7. Problem with vim delete, add to ~/.vimrc in the end:
+```bash
+set backspace=indent,eol,start
+```

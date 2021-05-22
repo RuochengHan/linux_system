@@ -8,3 +8,9 @@ $ sudo nvidia-smi -i 0 -pl 140
 ~/.chia/
 ```
 4. Chia remote GUI: https://github.com/Chia-Network/chia-blockchain/wiki/Connecting-the-UI-to-a-remote-daemon
+5. Chia connect to peers:
+```bash
+$ chia show -a chia.spdns.eu:8444
+$ chia show -a node-eu.chia.net:8444
+$ chia show -a introducer-eu.chia.net:8444
+```

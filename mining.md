@@ -13,4 +13,5 @@ $ sudo nvidia-smi -i 0 -pl 140
 $ chia show -a chia.spdns.eu:8444
 $ chia show -a node-eu.chia.net:8444
 $ chia show -a introducer-eu.chia.net:8444
+# Or check this page: https://chia.keva.app/
 ```

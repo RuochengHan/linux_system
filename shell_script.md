@@ -114,3 +114,9 @@ awk -v M="$mean" '{ total += ($1-M)*($1-M); count++ } END { print sqrt(total/cou
 ```bash
 tr -d '\n'
 ```
+
+18. add a file before/after the forst line of a file:
+```bash
+sed -i -e '1r file1' file2
+sed -i -e '1 e cat file2' file2
+```

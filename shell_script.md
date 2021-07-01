@@ -39,6 +39,7 @@ name="${name:1}"
 ```bash
 rsync --bwlimit=20000 -vvv /path-to-src /path-to-des
 rsync --bwlimit=20000 -vvv -e 'ssh -p $port' name@domain:/path-to-src /path-to-des
+rsync -avzh --bwlimit=20000 /path-to-src /path-to-des
 ```
 
 6. Check if file contain some string

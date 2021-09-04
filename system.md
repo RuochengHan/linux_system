@@ -42,3 +42,8 @@ set backspace=indent,eol,start
 sudo dmidecode -t baseboard
 sudo dmidecode --type 17
 ``` 
+
+9. Install atom, only 1.51.0 support CentOS 7:
+```bash
+https://github.com/atom/atom/releases/tag/v1.51.0
+```

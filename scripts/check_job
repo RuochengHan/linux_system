@@ -1,0 +1,4 @@
+#! /bin/bash
+
+PID=$1
+ls -l /proc/$PID | awk -F ' ' '{print $11}' | sed '/^$/d'

@@ -123,3 +123,8 @@ tr -d '\n'
 sed -i -e '1r file1' file2
 sed -i -e '1 e cat file2' file2
 ```
+
+19. check certain file containing strings in a dir, -H print dir/file name:
+```bash
+find $dir -name $file -exec grep -H $string {} \;
+```

@@ -128,3 +128,9 @@ sed -i -e '1 e cat file2' file2
 ```bash
 find $dir -name $file -exec grep -H $string {} \;
 ```
+
+20. delete the whole line:
+```bash
+sed -i 's/$string//g' $file # not work
+sed -i '/$string/d' $file # work
+```

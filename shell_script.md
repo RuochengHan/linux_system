@@ -134,3 +134,22 @@ find $dir -name $file -exec grep -H $string {} \;
 sed -i 's/$string//g' $file # not work
 sed -i '/$string/d' $file # work
 ```
+
+21. bash script check
+```bash
+bash -n script.sh # check error of script
+sh -x script.sh aaa #
+```
+
+22. if $var is (not) defined, substitute with string:
+```bash
+${var:-string}, ${var:+string}, ${var:=string}, ${var:?string}
+```
+
+23. match the string in $var:
+```bash
+${var%pattern} # shortest match, from left
+${var%%pattern} # longest match, from left
+${var#pattern} # shortest match, from right
+${var##pattern} # longest match, from right
+```

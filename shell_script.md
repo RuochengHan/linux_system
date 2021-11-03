@@ -153,3 +153,8 @@ ${var%%pattern} # longest match, from left
 ${var#pattern} # shortest match, from right
 ${var##pattern} # longest match, from right
 ```
+
+24. print only the next line of match
+```bash
+awk '/$var/{getline; print}' $file
+```

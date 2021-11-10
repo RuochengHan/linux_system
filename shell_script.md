@@ -118,10 +118,10 @@ awk -v M="$mean" '{ total += ($1-M)*($1-M); count++ } END { print sqrt(total/cou
 tr -d '\n'
 ```
 
-18. add a file before/after the forst line of a file:
+18. add a file before/after the first line of a file:
 ```bash
 sed -i -e '1r file1' file2
-sed -i -e '1 e cat file2' file2
+sed -i -e '1 e cat file1' file2
 ```
 
 19. check certain file containing strings in a dir, -H print dir/file name:

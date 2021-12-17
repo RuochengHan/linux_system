@@ -47,3 +47,8 @@ sudo dmidecode --type 17
 ```bash
 https://github.com/atom/atom/releases/tag/v1.51.0
 ```
+
+10. compress with multicore
+```bash
+$ tar -cv --use-compress-program=pigz -f $file.tar.gz dir_to_zip
+```

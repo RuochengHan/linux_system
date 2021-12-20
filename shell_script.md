@@ -39,7 +39,7 @@ name="${name:1}"
 ```bash
 rsync --bwlimit=20000 -vvv /path-to-src /path-to-des
 rsync --bwlimit=20000 -vvv -e 'ssh -p $port' name@domain:/path-to-src /path-to-des
-rsync -avzh --bwlimit=20000 /path-to-src /path-to-des
+rsync -avzh --bwlimit=20000 /path-to-src /path-to-des # -z compression
 rsync -avzh --bwlimit=20000 --exclude={'*.txt','dir3','dir4'} /path-to-src /path-to-des
 rsync -avzh --bwlimit=20000 --exclude-from 'exclude-list.txt' /path-to-src /path-to-des
 scp -r -l 400000 /path-to-src /path-to-des # unit kbit

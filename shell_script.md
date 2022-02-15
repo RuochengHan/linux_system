@@ -24,7 +24,7 @@ do
   run "$i" &
   background=( $(jobs -p) )
   if (( ${#background[@]} == p )); then
-    wait -n
+    wait -n # -n option is for waiting any background job to finish, otherwise until all jobs finish
   fi
 done
 

@@ -57,9 +57,10 @@ fi
 find */$subfolder -type d '!' -exec test -e "{}/$file" ';' -print
 ```
 
-8. Get the information between two lines:
+8. Get the information between two lines, and get certain column:
 ```bash
 awk "/$line1/{f=1;next} /$line2/{f=0} f" $file > tmp
+awk -F ' ' '/$line1/{f=1;next} /$line2/{f=0} f { print $2,$3}' $file > tmp
 ```
 
 9. Delete the information between two lines: (-E ensure some regex pattern like \s)

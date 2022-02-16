@@ -162,3 +162,8 @@ ${var##pattern} # longest match, from right
 ```bash
 awk '/$var/{getline; print}' $file
 ```
+
+25. delete first and last line:
+```bash
+sed -i '1d;$d' $file
+```

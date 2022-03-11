@@ -168,3 +168,8 @@ awk '/$var/{getline; print}' $file
 ```bash
 sed -i '1d;$d' $file
 ```
+
+26. check the recent modified file:
+```bash
+find . -type f -mtime -90 # in the 90 days
+```

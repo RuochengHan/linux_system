@@ -180,3 +180,8 @@ sed -i '1i $sth' $file
 sed -i '1i\\' $file # a blank line
 sed -i '0,/^/s/^/\n\n\n/g' $file # three blank lines
 ```
+
+28. sum of a column
+```bash
+... | paste -sd+ - | bc
+```

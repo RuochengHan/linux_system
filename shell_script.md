@@ -173,3 +173,9 @@ sed -i '1d;$d' $file
 ```bash
 find . -type f -mtime -90 # in the 90 days
 ```
+
+27. add text/line at the beginning of a file
+```bash
+sed -i '1i $sth' $file
+sed -i '1i\\' $file # a blank line
+```

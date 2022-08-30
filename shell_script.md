@@ -185,3 +185,8 @@ sed -i '0,/^/s/^/\n\n\n/g' $file # three blank lines
 ```bash
 ... | paste -sd+ - | bc
 ```
+
+29. remove 
+```bash
+sed -i -e "s/\r//g" $file
+```

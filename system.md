@@ -52,3 +52,9 @@ https://github.com/atom/atom/releases/tag/v1.51.0
 ```bash
 $ tar -cv --use-compress-program=pigz -f $file.tar.gz dir_to_zip
 ```
+
+11. uncompress/extract specific files
+```bash
+tar ztf compressed.tar.gz | grep $file # to check if it exists
+tar zxvf compressed.tar.gz $file
+```

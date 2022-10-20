@@ -58,3 +58,8 @@ $ tar -cv --use-compress-program=pigz -f $file.tar.gz dir_to_zip
 tar ztf compressed.tar.gz | grep $file # to check if it exists
 tar zxvf compressed.tar.gz $file
 ```
+
+12. crontab back up
+```bash
+0 2 * * 1-5 rsync -avzh --bwlimit=30000 --exclude={'*ChVec1', '*OneRel', '*lus', 'purge.*', 'node0/', 'tmp*'} /scratch/$dir /home/$targetdir
+```

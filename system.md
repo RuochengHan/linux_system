@@ -61,5 +61,6 @@ tar zxvf compressed.tar.gz $file
 
 12. crontab back up
 ```bash
+0 2 * * 6 tar zcvf /home/$targetdir.week.tar.gz /scratch/$dir
 0 2 * * 1-5 rsync -avzh --bwlimit=30000 --exclude={'*ChVec1', '*OneRel', '*lus', 'purge.*', 'node0/', 'tmp*'} /scratch/$dir /home/$targetdir
 ```

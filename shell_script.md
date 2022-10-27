@@ -190,3 +190,8 @@ sed -i '0,/^/s/^/\n\n\n/g' $file # three blank lines
 ```bash
 sed -i -e "s/\r//g" $file
 ```
+
+30. copy files with the parent structure
+```bash
+find $source -name "$file" -exec cp --parents \{\} $target \;
+```

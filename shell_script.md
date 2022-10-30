@@ -195,3 +195,8 @@ sed -i -e "s/\r//g" $file
 ```bash
 find $source -name "$file" -exec cp --parents \{\} $target \;
 ```
+
+31. get certain chars in each line:
+```bash
+$command | cut -c1-10
+```

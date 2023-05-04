@@ -186,7 +186,7 @@ sed -i '0,/^/s/^/\n\n\n/g' $file # three blank lines
 ... | paste -sd+ - | bc
 ```
 
-29. remove 
+29. remove ^M carriage return.
 ```bash
 sed -i -e "s/\r//g" $file
 ```
@@ -199,4 +199,9 @@ find $source -name "$file" -exec cp --parents \{\} $target \;
 31. get certain chars in each line:
 ```bash
 $command | cut -c1-10
+```
+
+32. awk use other delimiter:
+```bash
+awk -F ' ' '{print $1"\t"$2}' $file
 ```

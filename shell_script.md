@@ -205,3 +205,8 @@ $command | cut -c1-10
 ```bash
 awk -F ' ' '{print $1"\t"$2}' $file
 ```
+
+33. compress data except for some subfolders including folders start with .:
+```bash
+tar zcvf data.tar.gz --exclude="./\.*" --exclude="$subfolder" .
+```

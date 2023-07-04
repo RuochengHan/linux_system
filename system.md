@@ -64,3 +64,11 @@ tar zxvf compressed.tar.gz $file
 0 2 * * 6 tar zcvf /home/$targetdir.week.tar.gz /scratch/$dir
 0 2 * * 1-5 rsync -avzh --bwlimit=30000 --exclude={'*ChVec1', '*OneRel', '*lus', 'purge.*', 'node0/', 'tmp*'} /scratch/$dir /home/$targetdir
 ```
+
+13. ubuntu update upgrade version issue, update apt source list to:
+```bash
+etc/apt/sources.list:
+https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/
+```
+
+14. ubuntu cannot login issue, use update in 13, then update gdm3 or lightgdm

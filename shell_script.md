@@ -124,6 +124,7 @@ tr -d '\n'
 ```bash
 sed -i -e '1 e cat file1' file2
 sed -i -e '1r file1' file2
+sed -i -e "/$matchedstring/r file1' file2
 
 # for all files recursively under a directory:
 find . -name $file -exec sed -i -e '1 e cat file1' file2 {} \;

@@ -175,11 +175,13 @@ sed -i '1d;$d' $file
 find . -type f -mtime -90 # in the 90 days
 ```
 
-27. add text/line at the beginning of a file
+27. add text/line at the beginning of a file, or after a line.
 ```bash
 sed -i '1i $sth' $file
 sed -i '1i\\' $file # a blank line
 sed -i '0,/^/s/^/\n\n\n/g' $file # three blank lines
+# after
+sed -i '/$pattern/a $sth' $file
 ```
 
 28. sum of a column

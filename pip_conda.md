@@ -1,5 +1,5 @@
 # PIP
-1. mysql
+1. mysql (Ref. https://stackoverflow.com/questions/74236020/please-help-me-to-fix-the-error-mysqlclient)
 ```bash
 error: subprocess-exited-with-error
 

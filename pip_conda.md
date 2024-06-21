@@ -4,5 +4,5 @@
 error: subprocess-exited-with-error
 
 sudo apt-get install python3-dev default-libmysqlclient-dev build-essential
-pip install mysqlclient mysql-connector -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip install mysqlclient mysql-connector-python -i https://pypi.tuna.tsinghua.edu.cn/simple # not mysql-connector
 ```

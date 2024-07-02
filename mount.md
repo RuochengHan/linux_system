@@ -34,3 +34,13 @@ Remember to select the correct partition, like /dev/sdf2 rather than /dev/sdf
 ```bash
 mount -t ntfs-3g /dev/sdf2 /mnt/win
 ```
+
+**mount lvm format for old linux system**
+```bash
+sudo apt install lvm2
+sudo vgscan
+sudo vgchange -ay $Vgname # e.g. centos7 in my case
+sudo lvs
+sudo mount /dev/$Vgname/$partition $destination
+```
+

@@ -216,3 +216,13 @@ awk -F ' ' '{print $1"\t"$2}' $file
 ```bash
 tar zcvf data.tar.gz --exclude="./\.*" --exclude="$subfolder" .
 ```
+
+34. exit a for loop if any error in the script in the loop:
+```bash
+set -e
+cat $file | while read line
+do
+# some scripts
+...
+done
+```

@@ -72,3 +72,21 @@ https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/
 ```
 
 14. ubuntu cannot login issue, use update in 13, then update gdm3 or lightgdm
+
+15. Ubuntu auto suspend/sleep (Ref. https://www.modb.pro/db/427341):
+```bash
+systemctl status sleep.target
+# gives: sleep.target - Sleep
+#     Loaded: loaded (/lib/systemd/system/sleep.target; static)
+
+# Run
+sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
+
+# Then again
+systemctl status sleep.target
+# gives: sleep.target
+#     Loaded: masked (Reason: Unit sleep.target is masked.)
+#     Active: inactive (dead) since Fri 2024-08-02 16:20:45 CST; 58s ago
+
+# Masked means done.
+```

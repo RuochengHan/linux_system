@@ -16,6 +16,16 @@ $ sudo mkfs -t ntfs /dev/sdf1 (format to ntfs e.g. for windows)
 ```
 Other info: https://www.jianshu.com/p/d0c75fd8bcc5
 
+**mount disk@starting**
+```bash
+$ sudo cp /etc/fstab /etc/fstab.bak
+$ sudo blkid /dev/sdc
+# print sth
+# modify /etc/fstab accordingly
+```
+https://blog.csdn.net/qq_35451572/article/details/79541106?ydreferer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS5oay8%3D
+
+
 remove the reserve space for superuser: https://askubuntu.com/questions/249387/df-h-used-space-avail-free-space-is-less-than-the-total-size-of-home
 ```bash
 $ sudo tune2fs -l /dev/sdc # check

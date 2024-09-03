@@ -232,3 +232,8 @@ done
 ls XX* # it will show all files inside XX1/1.txt XX1/2.txt XX2/1.txt XX2/2.txt
 ls -d XX* # it correctly shows XX1 XX2
 ```
+
+36. awk multiple spaces
+```bash
+awk -F '[[:space:]][[:space:]]+'
+```

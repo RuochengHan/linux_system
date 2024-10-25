@@ -220,7 +220,7 @@ tar zcvf data.tar.gz --exclude="./\.*" --exclude="$subfolder" .
 34. exit a for loop if any error in the script in the loop:
 ```bash
 set -e
-cat $file | while read line
+cat $file | while read line || [[ -n $line ]] # ptherwise omit the last line without termination
 do
 # some scripts
 ...

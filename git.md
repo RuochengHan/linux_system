@@ -11,5 +11,6 @@ git config --global user.email ...
 git config --global user.name ...
 git commit -m "project upload
 git branch -M main
-git push -uf origin main
+git pull --rebase origin main
+git push -u origin main
 ```

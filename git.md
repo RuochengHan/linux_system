@@ -14,3 +14,10 @@ git branch -M main
 git pull --rebase origin main
 git push -u origin main
 ```
+3. change back to the remote branch (before you need to backup)
+```bash
+git fetch origin
+git reset --hard origin/main
+# Clean up unnecessary files and optimize the local repository
+git gc --prune=now --aggressive
+```

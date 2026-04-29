@@ -19,9 +19,15 @@ set -g status-right 'Continuum status: #{continuum_status}'
 # 初始化 TPM (放在文件最后)
 run '~/.tmux/plugins/tpm/tpm'
 
-$ tmux source ~/.tmux.conf #
+$ tmux source ~/.tmux.conf
+
+$ tmux
+$ (in tmux session) Prefix + I to reload session
 
 # TEST
+$ ls ~/.tmux/plugins/
+# make sure tpm/ tmux-resurrect/ tmux-continuum/ in it
+
 # Prefix + Ctrl-s should show state saved!
 # 👉 请紧盯屏幕底部的状态栏！你应该会看到一行字闪过：Tmux environment saved! (只有看到这句话，才说明存档文件真正写入到你的硬盘里了)
 

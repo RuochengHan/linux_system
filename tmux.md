@@ -1,4 +1,5 @@
 ```bash
+$ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 $ vim ~/.tmux.conf
 
 # 插件列表
